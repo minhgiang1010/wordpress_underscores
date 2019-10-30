@@ -47,11 +47,14 @@
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'underscores' ); ?></button>
 			<?php
+			
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_class'	 => 'nav-menu',
 				'menu_id'        => 'primary-menu',
+				'walker' => new HuuTien_Menu_Walker()
 			) );
+
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

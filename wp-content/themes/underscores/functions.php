@@ -158,3 +158,41 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * HuuTien Menu Walker 
+ */
+ require get_template_directory() . '/inc/custom-menu.php';
+
+
+// $a = 'a';
+// $b = [ 1, 2, 3 ];
+// $c = 1;
+// apply_filters( 'huutien_filter', $a );
+
+// function func_filters( $output ) {
+// 	$output = 'super a'. $output;
+// 	return $output;
+// }
+
+// add_filter( 'huutien_filter', 'func_filters' );
+
+// echo "<pre>";
+// print_r( apply_filters( 'huutien_filter', $a ) );
+// echo "</pre>";
+
+// Our filter callback function
+// function example_callback( $string, $arg1, $arg2 ) {
+// 	$string = 'super' .$string . "\n";
+// 	$string .= 'arg1' .$arg1 . "\n";
+// 	$string .= 'arg2' .$arg2 . "\n";
+//     return $string;
+// }
+// add_filter( 'example_filter', 'example_callback', 10, 3 ); 
+
+// $value = apply_filters( 'example_filter', 'filter me', 'arg1', 'arg2' );
+
+// echo "<pre>";
+// print_r( $value );
+// echo "</pre>";
+
