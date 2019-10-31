@@ -52,7 +52,7 @@
 				'theme_location' => 'menu-1',
 				'menu_class'	 => 'nav-menu',
 				'menu_id'        => 'primary-menu',
-				'walker' => new HuuTien_Menu_Walker()
+				'walker' => new HuuTien_Menu_Walker_Alecaddd()
 			) );
 
 			?>

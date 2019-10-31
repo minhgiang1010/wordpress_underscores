@@ -162,7 +162,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 /**
  * HuuTien Menu Walker 
  */
- require get_template_directory() . '/inc/custom-menu.php';
+ // require get_template_directory() . '/inc/custom-menu.php';
+
+
+/**
+ * HuuTien Menu Walker Alecadd 
+ */
+ require get_template_directory() . '/inc/custom-menu-alecaddd.php';
+
+
 
 
 // $a = 'a';
@@ -195,4 +203,3 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // echo "<pre>";
 // print_r( $value );
 // echo "</pre>";
-
