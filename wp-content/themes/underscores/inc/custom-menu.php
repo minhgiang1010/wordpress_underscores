@@ -84,8 +84,8 @@ class HuuTien_Menu_Walker extends Walker_Nav_Menu {
     public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0) {
         // @type string  $item_spacing Có duy trì khoản trắng trong HTML của menu thay không ? Chấp nhận 'preserve' hoặc 'discard'. Mặc định 'preserve'. 
         if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
-        $t = '';
-        $n = '';
+            $t = '';
+            $n = '';
         } else {
             $t = "\t";
             $n = "\n";
