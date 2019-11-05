@@ -53,7 +53,6 @@ class HuuTien_Menu_Walker_Alecaddd extends Walker_Nav_Menu {
 		$id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
 		$output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
         
-        
         // * Tạo thuộc tính cho tag <a> bao gồm href, class, ...
 		$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
 		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr($item->target) . '"' : '';

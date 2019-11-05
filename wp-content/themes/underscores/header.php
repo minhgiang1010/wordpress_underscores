@@ -20,11 +20,10 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'underscores' ); ?></a>
+<body <?php body_class(); ?> >
 
-	<header id="masthead" class="site-header">
+<div class="wrapper">
+	<header class="site-header">
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -44,15 +43,15 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'underscores' ); ?></button>
+		<nav class="main-navigation">
 			<?php
 			
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_class'	 => 'nav-menu',
 				'menu_id'        => 'primary-menu',
-				'walker' => new HuuTien_Menu_Walker_Alecaddd()
+				'container'		 => false, // bỏ cái wrapper div (không cần)
+				'walker' => new HuuTien_Menu_Walker_Alecaddd_Mega()
 			) );
 
 			?>
