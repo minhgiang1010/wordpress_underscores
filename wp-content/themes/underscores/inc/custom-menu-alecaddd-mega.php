@@ -136,10 +136,9 @@ class HuuTien_Menu_Walker_Alecaddd_Mega extends Walker_Nav_Menu {
             $item_output .= '</a> <span class="sub">' . $item->description . '</span>';
         }
 
-        $item_output .= (($depth == 0 || 1) && $args->has_children) ? ' <b class="caret"></b></a>' : '</a>';
+        $item_output .= ( ($depth == 0 || 1) && $args->walker->has_children) ? ' <b class="caret"></b></a>' : '</a>';
         $item_output .= $args->after;
 
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
-
 }

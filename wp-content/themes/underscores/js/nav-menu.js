@@ -5,7 +5,7 @@
 
     container = document.getElementsByClassName( 'main-navigation' );
    
-    console.log( windowWidth );
+    // console.log( windowWidth );
     if ( !container ) {
         return;
     }
@@ -21,7 +21,7 @@
         
         // console.log( dropdown[i].offsetWidth );
         // console.log( windowWidth - dropdown[i].offsetLeft );
-        console.log( right );
+        // console.log( right );
 
         if ( right ) {
             dropdown[i].style.right = 0;
