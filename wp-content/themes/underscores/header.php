@@ -45,33 +45,4 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div class="carousel">
-		<button class="carousel__button carousel__button--left">
-			<i class="fas fa-angle-left"></i>
-		</button>
-
-		<div class="carousel__track-container">
-			<ul class="carousel__track">
-				<li class="carousel__slide current-slide">
-					<img class="carousel__image" src="https://source.unsplash.com/random/650x650" alt="">
-				</li>
-				<li class="carousel__slide">
-					<img class="carousel__image" src="https://source.unsplash.com/random/650x650" alt="">
-				</li>
-				<li class="carousel__slide">
-					<img class="carousel__image" src="https://source.unsplash.com/random/650x650" alt="">
-				</li>
-			</ul>
-		</div>
-		<button class="carousel__button carousel__button--right">
-			<i class="fas fa-angle-right"></i>
-		</button>
-
-		<div class="carousel__nav">
-			<button class="carousel__indicator current-slide"></button>
-			<button class="carousel__indicator"></button>
-			<button class="carousel__indicator"></button>
-		</div>
-	</div>
-
 	<div id="content" class="site-content">

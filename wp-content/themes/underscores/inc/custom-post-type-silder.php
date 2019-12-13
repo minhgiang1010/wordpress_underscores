@@ -115,8 +115,9 @@ function cpt_set_columns ( $col ) {
     $newColumns = array();
     $newColumns['cb'] = 'Bulk action';
     // $newColumns['slider-image'] = 'Slider Image';
-	$newColumns['title-slide'] = 'Title';
-	$newColumns['count'] = 'Number of Images';
+    $newColumns['title-slide'] = 'Title';
+    $newColumns['description'] = 'Description';
+    $newColumns['count'] = 'Number of Images';
 	$newColumns['shortcode'] = 'Shortcode';
 	return $newColumns;
 }
@@ -128,23 +129,31 @@ function cpt_custom_column( $col, $post_id ) {
         case 'cb':
             echo '<input type="checkbox" />';
             break;
-        
-        // case 'slider-image':
-        //     echo '<img src="" alt="image">';
-        //     break;
 
 		case 'title-slide' :
             $title = get_post_meta( $post_id, '_title_slider_value_key', true );
             echo '<a href="'. get_admin_url().'post.php?post='.$post_id.'&action=edit" >'.$title.'</a>';
 			break;
-            
-        case 'count' : 
+        
+        case 'description': 
             $description = get_post_meta( $post_id, '_description_slider_value_key', true );
             echo $description;
             break;
+
+        case 'count' : 
+            $args = array(
+                'post_type'  => 'cpt-per-slide',
+                'posts_per_page' => -1,
+                'post_parent'  => $post_id
+            );
+
+            $count = count ( get_posts( $args ) );
+
+            echo esc_html( $count );
+            break;
             
 		case 'shortcode' :
-            echo 'This will be generated the [ shortcode ]';
+            echo '[ nht_simple_slide id="'.esc_html( $post_id ) .'" ]';
 			break;
 	}  
 

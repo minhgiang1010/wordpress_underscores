@@ -208,19 +208,11 @@ if (defined('JETPACK__VERSION')) {
 require get_template_directory() . '/inc/custom-menu-alecaddd-mega.php';
 
 /**
- * * HuuTien Slider CPT
+ * * HuuTien Slider CPT - Shortcode slide frontend - Ajax slide options
  */
 require get_template_directory() . '/inc/custom-post-type-silder.php';
-
-/**
- * * HuuTien Ajax
- */
 require get_template_directory() . '/inc/ajax.php';
-
-
-
-
-
+require get_template_directory() . '/inc/custom-shortcode-post-slider.php'; 
 
 // $a = 'a';
 // $b = [ 1, 2, 3 ];
